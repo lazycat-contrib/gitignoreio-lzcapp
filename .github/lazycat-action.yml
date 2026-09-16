@@ -1,0 +1,37 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: .lazycat-build/gitignoreio.lpk
+  target_arch: amd64
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: gitignoreio
+build:
+  run_buildscript: false
+images:
+  - id: gitignoreio
+    target: service
+    service: gitignoreio
+    source: guog/gitignore.io
+    channel: stable
+    sort: semver
+    tag_regex: '^v?\d+\.\d+\.\d+$'
+    delivery:
+      mode: lazycat
+stores:
+  official:
+    enabled: true
+    skip_if_version_exists: true
+    changelog_locales: [zh, en]
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: gitignore.io
+    summary: "为你的项目创建必要的 .gitignore 文件"

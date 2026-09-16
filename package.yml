@@ -1,0 +1,18 @@
+package: cloud.lazycat.app.gitignore-io
+version: 0.1.0
+name: gitignore.io
+description: "为你的项目创建必要的 .gitignore 文件"
+min_os_version: "1.5.0"
+homepage: https://github.com/toptal/gitignore.io
+author: toptal
+unsupported_platforms:
+  - ios
+  - android
+  - tvos
+locales:
+  zh:
+    description: "为你的项目创建必要的 .gitignore 文件"
+    name: gitignore.io
+  en:
+    description: "Create necessary .gitignore files for your projects"
+    name: gitignore.io
