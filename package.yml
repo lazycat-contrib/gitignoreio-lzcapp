@@ -1,5 +1,5 @@
 package: cloud.lazycat.app.gitignore-io
-version: 0.1.0
+version: 1.0.0
 name: gitignore.io
 description: "为你的项目创建必要的 .gitignore 文件"
 min_os_version: "1.5.0"

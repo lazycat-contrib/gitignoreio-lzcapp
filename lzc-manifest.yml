@@ -7,8 +7,7 @@ application:
   upstreams:
     - location: /
       backend: http://gitignoreio:8080/
-
 services:
   gitignoreio:
     # upstream: guog/gitignore.io:1.0.0
-    image: guog/gitignore.io:1.0.0
+    image: registry.lazycat.cloud/czyt/guog/gitignore.io:7686f4ffca9d956f
